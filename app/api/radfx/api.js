@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = "https://desolate-earth-37589.herokuapp.com"
+const api = "http://127.0.0.1:8000"
 
 // params required: {first_name, last_name, email, password}
 export const registerUser = async (params) => {
@@ -10,12 +10,12 @@ export const registerUser = async (params) => {
       .catch((error) => error.response);
   };
 
-  export const login = async (params) => {
+export const login = async (params) => {
     return axios
-      .post(`${api}/login`, params)
-      .then((response) => response)
-      .catch((error) => error.response);
-  };
+    .post(`${api}/login`, params)
+    .then((response) => response)
+    .catch((error) => error.response);
+};
   
 export const getUser = async (user_id) => {
     return axios

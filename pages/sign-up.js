@@ -58,8 +58,8 @@ export default function SignUp() {
     // if (result.status === 200) {
     //   // route to index
     // }
-
   }
+
   const onChangeHandler = (e) => {
     const { name } = e.target;
     const { value } = e.target;

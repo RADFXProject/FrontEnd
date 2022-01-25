@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,6 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import RouteLink from 'next/link';
+import * as RADFX_API from '@radfx-api'
+
 
 function Copyright() {
   return (
@@ -50,6 +52,31 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
   const classes = useStyles();
 
+  const [user, setUser] = useState({ username: '', password: '' })
+  const [is_valid, setIsValid] = useState({
+    username: false,
+    password: {
+      contains_number: false,
+      min_length: false,
+      contains_special_character: false,
+      contains_upper_character: false,
+    },
+  });
+
+  async function loginUser(e) {
+    console.log(user)
+    e.preventDefault();
+    const params = user;
+    const result = await RADFX_API.login(params);
+  }
+
+  const onChangeHandler = (e) => {
+    const { name } = e.target;
+    const { value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -68,8 +95,10 @@ export default function SignIn() {
             fullWidth
             id="email"
             label="Email Address"
-            name="email"
+            name="username"
             autoComplete="email"
+            value = {user.username}
+            onChange={(e) => onChangeHandler(e)}
             autoFocus
           />
           <TextField
@@ -82,6 +111,8 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            value = {user.password}
+            onChange={(e) => onChangeHandler(e)}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -93,6 +124,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={loginUser}
           >
             Sign In
           </Button>
