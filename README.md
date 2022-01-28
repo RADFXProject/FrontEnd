@@ -66,6 +66,9 @@ https://github.com/RADFXProject/FrontEnd
 - **Push origin**
 
 ### **Now your changes for the day are in the dev branch**
+## ALWAYS MERGE YOUR PERSONAL BRANCH INTO DEV WHEN YOU FEEL A FEATURE IS "COMPLETE"/READY TO BE SHARED
+<br>
+
 ### **When you're ready for another day/feature**
 
 - Open Github Desktop, select your branch
@@ -86,6 +89,12 @@ cd /mnt/c/Users/admin/Documents/GitHub/FrontEnd/
 npm install --legacy-peer-deps
 npm run dev
 ```
+- Open your browser to http://localhost:3000
+- You will see the local web-server reflecting your immediate changes
+- Leave the Ubuntu window running, you will see console messages from NPM (for example when saving changes or visiting pages for the first time
+)
+- Press Ctrl + C to stop the npm server
+- Open another Ubuntu window to get access to another shell (maybe you want to run the backend and a database locally too for testing?)
 
 <br>
 <br>
