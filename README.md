@@ -14,9 +14,6 @@ The goal of this project is to create a management system for scheduling particl
 - [Node.js](https://nodejs.org/en/)
 - [Github Desktop](https://desktop.github.com/)
 - [A github account](https://github.com/)
-
-
-## Recomended IDE
 - [VSCode](https://code.visualstudio.com/)
 
 <br>
@@ -70,7 +67,6 @@ https://github.com/RADFXProject/FrontEnd
 
 ### **Now your changes for the day are in the dev branch**
 ### **When you're ready for another day/feature**
-<br>
 
 - Open Github Desktop, select your branch
 
