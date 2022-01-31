@@ -81,7 +81,9 @@ https://github.com/RADFXProject/FrontEnd
 
 ## Running the front-end locally
 
-In my case, my Windows username is "admin", yours will vary
+In my case, my Windows username is "admin", yours will vary so know your system username
+
+Do the commands in the Ubuntu terminal
 ```
 cd /mnt/c/Users/admin/Documents/GitHub/FrontEnd/
 ```
