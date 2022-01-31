@@ -66,7 +66,7 @@ https://github.com/RADFXProject/FrontEnd
 - **Push origin**
 
 ### **Now your changes for the day are in the dev branch**
-## ALWAYS MERGE YOUR PERSONAL BRANCH INTO DEV WHEN YOU FEEL A FEATURE IS "COMPLETE"/READY TO BE SHARED
+## ALWAYS MERGE YOUR PERSONAL BRANCH INTO DEV AFTER WORKING SO OTHERS CAN KEEP UP TO DATE
 <br>
 
 ### **When you're ready for another day/feature**
@@ -115,7 +115,7 @@ In my case, my Windows username is "admin", yours will vary
 ```
 code .
 ```
-- This will open the project in VS Code, however you'll see additional information integrated into VS Code, you will need to configure Git for Windows natively (works for without it, but I cannot replicate)
+- This will open the project in VS Code, however you'll see additional information integrated into VS Code, you will need to configure Git for Windows natively (works for me without it, but I cannot replicate this on a new system)
 
 </details>
 
