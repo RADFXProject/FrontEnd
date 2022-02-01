@@ -68,6 +68,10 @@ export default function SignIn() {
     e.preventDefault();
     const params = user;
     const result = await RADFX_API.login(params);
+    console.log(result)
+    if(result.status == 200){
+      window.location.href = "/home";
+    }
   }
 
   const onChangeHandler = (e) => {
@@ -125,7 +129,7 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
             onClick={loginUser}
-          >
+            >
             Sign In
           </Button>
           <Grid container>

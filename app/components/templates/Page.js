@@ -14,6 +14,7 @@ export default function Page(props) {
         { title: 'schedule', url: '/schedule' },
         { title: 'directory', url: '/directory' },
         { title: 'about', url: '/about' }
+        //,{ title: 'home', url: '/home' }
     ]
 
     return (
