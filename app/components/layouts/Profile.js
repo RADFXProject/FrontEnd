@@ -216,10 +216,12 @@ export default function Home() {
     ]
   })
   async function fetchDataUser() {
+    /*
     const result = await API.getUser(1);
     console.log(result)
     setUser(result.data);
     console.log(result.data)
+    */
   }
   useEffect(() => {
     fetchDataUser()
