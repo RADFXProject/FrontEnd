@@ -5,8 +5,7 @@ import Page from '@/templates/Page'
 import { makeStyles } from '@material-ui/core/styles';
 
 export default function Home() {
-  /*
-  const [user, setUser] = useState({user_name: "___"})
+  /*const [user, setUser] = useState({user_name: "___"})
   async function fetchDataUser() {
     const result = await API.getUser(1);
     console.log(result)
@@ -15,8 +14,7 @@ export default function Home() {
   }
   useEffect(() => {
     fetchDataUser()
-    }, []) 
-  */
+    }, [])*/
   return (
     <>
       <Page title="RADFX" >
@@ -31,7 +29,7 @@ export default function Home() {
         >
           Introduction to radiation effects testing        
         </Typography>
-        <div> {} </div>
+        <div> {'user.user_name'} </div>
         <Typography
           component="h2"
           variant="body1"

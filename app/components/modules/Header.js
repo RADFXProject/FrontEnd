@@ -25,9 +25,9 @@ function Header(props) {
             href="/">
             {title}</Link>
         </Typography>
-        <Link href='/sign-up'>
+        <Link href='/sign-in'>
         <Button variant="outlined" size="small">
-          Sign up
+          Sign In
         </Button>
         </Link>
       </Toolbar>
