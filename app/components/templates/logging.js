@@ -13,11 +13,11 @@ import { useTabStyles, AntTab, AntTabs } from '@/styles/useTabStyles';
 export default function Page(props) {
     const { title, children } = props;
     const sections = [
-        { title: 'profile', url: '/integrator/profile' },
-        { title: 'request', url: '/integrator/request' },
-        { title: 'schedule', url: '/integrator/schedule' },
-        { title: 'directory', url: '/integrator/directory' },
-        { title: 'about', url: '/integrator/about' }
+        //{ title: 'profile', url: '/integrator/profile' },
+        //{ title: 'request', url: '/integrator/request' },
+        //{ title: 'schedule', url: '/integrator/schedule' },
+        //{ title: 'directory', url: '/integrator/directory' },
+        //{ title: 'about', url: '/integrator/about' }
         //,{ title: 'home', url: '/home' }
     ]
     const info = {
@@ -34,7 +34,7 @@ export default function Page(props) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Container maxWidth="lg">
-                <Header title="RADFX" sections={sections} info={info}/>
+                <Header title="RADFX" sections = {sections} info={info}/>
                 <main>{children}</main>
             </Container>
             <Footer/>

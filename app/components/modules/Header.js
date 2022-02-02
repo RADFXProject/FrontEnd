@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 function Header(props) {
-  const { title, sections } = props;
+  const { title, sections, info } = props;
 
   const log = false;
   const auth = log ? "Sign Out" : "Sign In";
@@ -29,7 +29,7 @@ function Header(props) {
             href="/">
             {title}</Link>
         </Typography>
-        <Link href='/'>
+        <Link href='/sign-in'>
         <Button variant="outlined" size="small">
             {auth}
         </Button>

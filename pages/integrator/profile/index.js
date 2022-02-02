@@ -1,9 +1,12 @@
 import React from 'react';
-import Profile from '/pages/integrator/request/Request'
+import Page from '@/templates/integrator'
+import Profile from '/pages/integrator/profile/Profile'
 
 
 export default function Index() {
   return (
-    <Profile />
+    <Page title="RADFX - Profile" >
+      <Profile />
+    </Page>
   )
 }
