@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import RouteLink from 'next/link';
+import router, {useRouter} from 'next/router';
 import * as RADFX_API from '@radfx-api'
 
 
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
   const classes = useStyles();
 
-  const [user, setUser] = useState({ username: '', password: '' })
+  const [user, setUser] = useState({ username: '', password: '' });
   const [is_valid, setIsValid] = useState({
     username: false,
     password: {
@@ -63,14 +64,22 @@ export default function SignIn() {
     },
   });
 
+  const [info, setInfo] = useState({email: '', role: ''});
+
   async function loginUser(e) {
-    console.log(user)
+    //console.log(user)
     e.preventDefault();
     const params = user;
     const result = await RADFX_API.login(params);
-    console.log(result)
-    if(result.status == 200){
-      window.location.href = "/home";
+    //console.log(result)
+    if(result.status == 200 && result.data[0] == "admin"){
+      //localStorage.setItem('token', result.data.access_token)
+      setInfo({[info.email]: result.data[1], [info.role]: result.data[0] });
+      console.log(info.email);
+      console.log(info.role);
+      router.push("integrator");
+    } else {
+      alert('Login Failed.')
     }
   }
 

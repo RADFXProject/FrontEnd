@@ -5,15 +5,19 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Header from '@/modules/Header';
 import Footer from '@/elements/Footer';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import { useTabStyles, AntTab, AntTabs } from '@/styles/useTabStyles';
 
 export default function Page(props) {
     const { title, children } = props;
     const sections = [
-        //{ title: 'profile', url: '/profile' },
-        //{ title: 'request', url: '/request' },
-        //{ title: 'schedule', url: '/schedule' },
-        { title: 'directory', url: '/directory' },
-        { title: 'about', url: '/about' }
+        { title: 'profile', url: '/integrator/profile' },
+        { title: 'request', url: '/integrator/request' },
+        { title: 'schedule', url: '/integrator/schedule' },
+        { title: 'directory', url: '/integrator/directory' },
+        { title: 'about', url: '/integrator/about' }
         //,{ title: 'home', url: '/home' }
     ]
 

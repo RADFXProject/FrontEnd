@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link';
 import Page from '@/templates/integrator'
-import Hero from '@/modules/about/Hero';
-
+import Hero from '@/modules/directory/Hero';
+import DirectoryTabs from '@/modules/directory/Tabs';
 
 export default function Directory() {
   return (
-    <Page title="Integrator" >
-      
+    <Page title="RADFX - directory" >
+      <Hero />
+      <DirectoryTabs />
     </Page>
   )
 }
