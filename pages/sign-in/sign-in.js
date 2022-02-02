@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { foo } from '/pages/globals';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -51,6 +52,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+
+  console.log(foo);
   const classes = useStyles();
 
   const [user, setUser] = useState({ username: '', password: '' });
@@ -64,7 +67,7 @@ export default function SignIn() {
     },
   });
 
-  const [info, setInfo] = useState({email: '', role: ''});
+  
 
   async function loginUser(e) {
     //console.log(user)
@@ -74,9 +77,7 @@ export default function SignIn() {
     //console.log(result)
     if(result.status == 200 && result.data[0] == "admin"){
       //localStorage.setItem('token', result.data.access_token)
-      setInfo({[info.email]: result.data[1], [info.role]: result.data[0] });
-      console.log(info.email);
-      console.log(info.role);
+      
       router.push("integrator");
     } else {
       alert('Login Failed.')
