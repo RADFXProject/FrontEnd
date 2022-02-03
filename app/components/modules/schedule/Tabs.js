@@ -4,6 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Cal from '@/modules/schedule/cal'
 import Berkley from '@/modules/schedule/Berkley'
 import Nasa from '@/modules/schedule/Nasa'
 import TexasAM from '@/modules/schedule/TexasAM'
@@ -28,7 +29,7 @@ export default function Tabinator() {
                     <AntTab label="Texas A&M" />
                 </AntTabs>
                 <Container maxWidth="lg" style={is_visible === 0 ? { display: '' } : { display: 'none' }}>
-                    <Overview />
+                    <Cal />
                 </Container>
                 <Container maxWidth="lg" style={is_visible === 1 ? { display: '' } : { display: 'none' }}>
                     <Berkley />

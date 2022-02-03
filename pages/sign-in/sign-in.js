@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { foo } from '/pages/globals';
+import React, { useContext, useState } from 'react';
+import { InfoContext } from '/pages/globals';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -53,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
 
-  console.log(foo);
+  const {info} = useContext(InfoContext);
+  console.log(info);
   const classes = useStyles();
 
   const [user, setUser] = useState({ username: '', password: '' });
