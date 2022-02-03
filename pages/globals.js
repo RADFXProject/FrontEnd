@@ -1,4 +1,16 @@
-const foo = 'abc';
+import React, {useState, createContext} from "react";
 
+export const InfoContext = createContext();
 
-export {foo};
+export const InfoProvider = props => {
+    const [info, setInfo] = useState({
+        email: '',
+        role: ''
+    });
+
+    return (
+        <InfoContext.Provider value={{info}}>
+            {props.children}
+        </InfoContext.Provider>
+    );
+}

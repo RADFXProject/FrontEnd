@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import {React, useContext} from 'react'
+import { InfoProvider } from './globals.js';
 import Home from "./index.js";
 import { useRouter } from "next/router";
 //import { AppState } from "components/app-state"; 
@@ -18,7 +19,12 @@ function MyApp({ Component, pageProps }) {
     }
     const ComponentToRender = allowed ? Component : Home; 
     return <ComponentToRender {...pageProps} />*/
-    return <Component {...pageProps} />
+    return (
+      <InfoProvider>
+        <Component {...pageProps} />
+      </InfoProvider>
+      
+    ); 
 }
 
 export default MyApp
