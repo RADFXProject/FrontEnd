@@ -4,11 +4,12 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Cal from '@/modules/schedule/cal'
-import Berkley from '@/modules/schedule/Berkley'
-import Nasa from '@/modules/schedule/Nasa'
-import TexasAM from '@/modules/schedule/TexasAM'
-import Overview from '@/modules/schedule/Overview'
+import Cal from '@/modules/schedule/cal';
+import Cal2 from '@/modules/schedule/cal2';
+import Berkley from '@/modules/schedule/Berkley';
+import Nasa from '@/modules/schedule/Nasa';
+import TexasAM from '@/modules/schedule/TexasAM';
+import Overview from '@/modules/schedule/Overview';
 import { useTabStyles, AntTab, AntTabs } from '@/styles/useTabStyles';
 
 export default function Tabinator() {
@@ -32,7 +33,7 @@ export default function Tabinator() {
                     <Cal />
                 </Container>
                 <Container maxWidth="lg" style={is_visible === 1 ? { display: '' } : { display: 'none' }}>
-                    <Berkley />
+                    <Cal2 />
                 </Container>
                 <Container maxWidth="lg" style={is_visible === 2 ? { display: '' } : { display: 'none' }}>
                     <Nasa />
