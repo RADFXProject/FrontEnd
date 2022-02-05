@@ -9,9 +9,9 @@ import Footer from '@/elements/Footer';
 export default function Page(props) {
     const { title, children } = props;
     const sections = [
-        //{ title: 'profile', url: '/profile' },
-        //{ title: 'request', url: '/request' },
-        //{ title: 'schedule', url: '/schedule' },
+        { title: 'profile', url: '/profile' },
+        { title: 'request', url: '/request' },
+        { title: 'schedule', url: '/schedule' },
         { title: 'directory', url: '/directory' },
         { title: 'about', url: '/about' }
         //,{ title: 'home', url: '/home' }

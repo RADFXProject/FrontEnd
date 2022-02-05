@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { InfoContext } from '/pages/globals';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import RouteLink from 'next/link';
+import router, {useRouter} from 'next/router';
 import * as RADFX_API from '@radfx-api'
 
 
@@ -50,9 +52,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+
+  const {info} = useContext(InfoContext);
+  console.log(info);
   const classes = useStyles();
 
-  const [user, setUser] = useState({ username: '', password: '' })
+  const [user, setUser] = useState({ username: '', password: '' });
   const [is_valid, setIsValid] = useState({
     username: false,
     password: {
@@ -63,11 +68,21 @@ export default function SignIn() {
     },
   });
 
+  
+
   async function loginUser(e) {
-    console.log(user)
+    //console.log(user)
     e.preventDefault();
     const params = user;
     const result = await RADFX_API.login(params);
+    //console.log(result)
+    if(result.status == 200 && result.data[0] == "admin"){
+      //localStorage.setItem('token', result.data.access_token)
+      
+      router.push("integrator");
+    } else {
+      alert('Login Failed.')
+    }
   }
 
   const onChangeHandler = (e) => {
@@ -125,7 +140,7 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
             onClick={loginUser}
-          >
+            >
             Sign In
           </Button>
           <Grid container>

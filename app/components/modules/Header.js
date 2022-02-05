@@ -8,7 +8,11 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 function Header(props) {
-  const { title, sections } = props;
+  const { title, sections, info } = props;
+
+  const log = false;
+  const auth = log ? "Sign Out" : "Sign In";
+
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -25,9 +29,9 @@ function Header(props) {
             href="/">
             {title}</Link>
         </Typography>
-        <Link href='/sign-up'>
+        <Link href='/sign-in'>
         <Button variant="outlined" size="small">
-          Sign up
+            {auth}
         </Button>
         </Link>
       </Toolbar>

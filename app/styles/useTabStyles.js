@@ -72,12 +72,13 @@ const StyledTab = withStyles((theme) => ({
 
 export const useTabStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        flexGrow: 1
     },
     padding: {
         padding: theme.spacing(3),
     },
     demo1: {
         backgroundColor: '#fafafa',
+        marginTop: '50px',
     },
 }));
