@@ -108,9 +108,16 @@ export const getListProjects = async () => {
     .catch((error) => error.response);
 }
 
-export const createRequest = async (project_id, params) => {
+/*export const createRequest = async (project_id, params) => {
     return axios
     .post(`${api}/project/${project_id}/request`, params)
+    .then((response) => response)
+    .catch((error) => error.response);
+}*/
+
+export const createRequest = async (params) => {
+    return axios
+    .post(`${api}/post_request`, params)
     .then((response) => response)
     .catch((error) => error.response);
 }
