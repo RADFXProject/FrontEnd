@@ -5,8 +5,8 @@ import Profile from '/pages/integrator/profile/Profile'
 
 export default function Index() {
   return (
-    <Page title="RADFX - Profile" >
-      <Profile />
-    </Page>
+
+    <Profile />
+    
   )
 }
